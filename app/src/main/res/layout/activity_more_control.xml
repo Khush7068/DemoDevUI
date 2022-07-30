@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context=".MoreControlActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="134dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.masoudss.lib.WaveformSeekBar
+            android:id="@+id/waveformSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            app:wave_background_color="@color/white"
+            app:wave_corner_radius="2dp"
+            app:wave_gap="2dp"
+            app:wave_gravity="center"
+            app:wave_max_progress="100"
+            app:wave_min_height="5dp"
+            app:wave_progress="33"
+            app:wave_progress_color="@color/green"
+            app:wave_width="5dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Wave Width"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/waveWidth"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:min="1"
+            android:progress="50" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Wave Gap"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/waveGap"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progress="20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Wave Corner Radius"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/waveCornerRadius"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progress="50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Progress"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/waveProgress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="100"
+            android:progress="33" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Maximum Progress"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/waveMaxProgress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="200"
+            android:min="1"
+            android:progress="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Shown duration"
+            android:textColor="@color/white" />
+
+        <SeekBar
+            android:id="@+id/visibleProgress"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:max="200"
+            android:min="0"
+            android:progress="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Gravity"
+                    android:textColor="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/gravityRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TOP"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CENTER"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="BOTTOM"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Wave Color"
+                    android:textColor="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/waveColorRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/pink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PINK"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YELLOW"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="WHITE"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Progress Color"
+                    android:textColor="@color/white" />
+
+                <RadioGroup
+                    android:id="@+id/progressColorRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RED"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="BLUE"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:id="@+id/green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GREEN"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
